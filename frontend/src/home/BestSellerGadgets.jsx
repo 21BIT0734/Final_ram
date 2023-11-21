@@ -5,7 +5,7 @@ const BestSellerGadgets = () => {
     const [gadgets , setGadgets] =useState([]);
 
     useEffect(() =>{
-        fetch("http://localhost:4000/view-product").then(res => res.json()).then(data => setGadgets(data.slice(0,10)))
+        fetch("https://final-ram-69.vercel.app/view-product").then(res => res.json()).then(data => setGadgets(data.slice(0,10)))
     },[])
   return (
     <div>
