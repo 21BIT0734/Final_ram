@@ -62,22 +62,22 @@ const UploadProducts = () => {
     };
     console.log(gadgets);
 
-  fetch("https://final-ram-69.vercel.app/upload-product", {
+fetch("https://final-ram-69.vercel.app/upload-product", {
   method: "POST",
   headers: {
     "Content-type": "application/json",
-    'Access-Control-Allow-Origin': 'https://final-ram.vercel.app',
   },
-  body: JSON.stringify(gadgets)
+  body: JSON.stringify(gadgets),
+  credentials: 'include', // Include credentials in the request
 })
+  .then(res => res.json())
+  .then(data => {
+    alert("Product Uploaded successfully");
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
-    .then(res => res.json())
-    .then(data => {
-      alert("Product Uploaded successfully")
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
   }
   return (
     <div className='px-4 my-12' >
