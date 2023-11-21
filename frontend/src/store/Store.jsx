@@ -17,10 +17,13 @@ const Store = () => {
     });
   };
   useEffect(() => {
-    fetch('https://final-ram-69.vercel.app/view-product')
+    fetch('https://final-ram-69.vercel.app/view-product', {
+        credentials: 'include', // Include credentials in the request
+    })
         .then((res) => res.json())
         .then((data) => setGadgets(data));
 }, []);
+
 
   return (
     <div className='mt-28 px-4 lg:px24'>
