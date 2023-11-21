@@ -6,7 +6,7 @@ const OtherGadgets = () => {
     const [gadgets , setGadgets] =useState([]);
 
     useEffect(() =>{
-        fetch("http://localhost:4000/view-product").then(res => res.json()).then(data => setGadgets(data.slice(3,8)))
+        fetch("https://final-ram-69.vercel.app/view-product").then(res => res.json()).then(data => setGadgets(data.slice(3,8)))
     },[])
   return (
     <div className='mt-15 py-12  px-4 lg:px-24' >
