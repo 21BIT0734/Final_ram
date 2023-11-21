@@ -17,7 +17,7 @@ const Store = () => {
     });
   };
   useEffect(() => {
-    fetch('https://final-ram-69-927c74wjf-diwakars-projects.vercel.app/view-product')
+    fetch('https://final-ram-69.vercel.app/view-product')
         .then((res) => res.json())
         .then((data) => setGadgets(data));
 }, []);
