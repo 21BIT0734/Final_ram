@@ -62,13 +62,15 @@ const UploadProducts = () => {
     };
     console.log(gadgets);
 
-    fetch("http://localhost:4000/upload-product", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(gadgets)
-    })
+  fetch("https://final-ram-69.vercel.app/upload-product", {
+  method: "POST",
+  headers: {
+    "Content-type": "application/json",
+    'Access-Control-Allow-Origin': 'https://final-ram.vercel.app/',
+  },
+  body: JSON.stringify(gadgets)
+})
+
     .then(res => res.json())
     .then(data => {
       alert("Product Uploaded successfully")
