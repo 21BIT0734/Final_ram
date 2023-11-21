@@ -17,7 +17,7 @@ const AdminProducts = () => {
     });
   };
   useEffect(() => {
-    fetch('http://localhost:4000/view-product')
+    fetch('https://final-ram-69.vercel.app/view-product')
         .then((res) => res.json())
         .then((data) => setGadgets(data));
 }, []);
