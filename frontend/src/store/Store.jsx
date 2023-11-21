@@ -22,11 +22,6 @@ const Store = () => {
         .then((data) => setGadgets(data));
 }, []);
 
-
-  useEffect(()=>
-  {
-    fetch("https://final-ram-69.vercel.app/view-product").then(res => res.json()).then(data => setGadgets(data));
-  },[])
   return (
     <div className='mt-28 px-4 lg:px24'>
       <h2 className='text-5xl font-bold text-center center'>Products In Store</h2>
