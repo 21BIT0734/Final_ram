@@ -24,7 +24,7 @@ app.get("/",(req,res)=>{
 app.use(cors(
   {
       origin: ["https://final-ram.vercel.app"],
-      methods: ["Get","POST","DELETE","PATCH"],
+      methods: ["Get","POST","DELETE","PATCH", "PUT", "FETCH"],
       credentials: true,
   }
 ))
@@ -134,11 +134,20 @@ async function run() {
     })
 
     //READ (VIEW PRODUCTS)
-    app.get("/view-product",async(req,res)=>{
-        const gadgets =  store.find();
-        const result = await gadgets.toArray();
-        res.send(result);
-    })
+    // app.get("/view-product",async(req,res)=>{
+    //     const gadgets =  store.find();
+    //     const result = await gadgets.toArray();
+    //     res.send(result);
+    // })
+    app.get("/view-product", async (req, res) => {
+      const gadgets = await store.find().toArray();
+      res.setHeader('Access-Control-Allow-Origin', 'https://final-ram.vercel.app/');
+      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+      res.setHeader('Access-Control-Allow-Credentials', 'true');
+      res.json(gadgets);
+    });
+
 
     //UPDATE (UPDATE PRODUCTS)
     app.patch("/update-product/:id",async(req,res)=>{
