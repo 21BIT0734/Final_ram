@@ -17,7 +17,7 @@ function Login () {
         e.preventDefault()
         window.localStorage.setItem("isLoggedIn",true)
         // window.localStorage.setItem("role",res.data.role)
-        axios.post('http://localhost:4000/login', {email,password})
+        axios.post('https://final-ram-69.vercel.app/login', {email,password})
         .then(res => {
             console.log(res.data);
             if (res.data.Status === "Success") {
