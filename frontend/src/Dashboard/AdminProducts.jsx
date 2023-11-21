@@ -23,10 +23,6 @@ const AdminProducts = () => {
 }, []);
 
 
-  useEffect(()=>
-  {
-    fetch("http://localhost:4000/view-product").then(res => res.json()).then(data => setGadgets(data));
-  },[])
   return (
     <div className='mt-28 px-4 lg:px24'>
       <h2 className='text-5xl font-bold text-center center'>Products In Store</h2>
