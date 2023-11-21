@@ -23,7 +23,7 @@ app.get("/",(req,res)=>{
 // middle ware
 app.use(cors(
   {
-      origin: ["http://localhost:5173"],
+      origin: ["https://final-ram.vercel.app"],
       methods: ["Get","POST","DELETE","PATCH"],
       credentials: true,
   }
