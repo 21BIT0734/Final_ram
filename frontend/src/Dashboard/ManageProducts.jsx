@@ -7,24 +7,10 @@ const ManageProducts = () => {
   useEffect(()=>{
     fetch("https://final-ram-69.vercel.app/view-product").then(res => res.json()).then(data =>SetGadgets(data));
   },[])
-  //handleDelete
-  // const handleDelete = (id)=> {
-  //   console.log(id)
-  //     fetch(`http://localhost:4000/delete-product/${id}`,{
-  //       method:"DELETE",
 
-
-  //     }).then(res => res.json()).then(data => {
-  //       alert("Product is Deleted successfully  ")
-  //       // SetGadgets(data);
-
-  //     }
-  //       );
-
-  // }
   const handleDelete = (id) => {
     console.log(id);
-    fetch(`http://localhost:4000/delete-product/${id}`, {
+    fetch(`https://final-ram-69.vercel.app/delete-product/${id}`, {
       method: "DELETE",
     })
       .then((res) => {
