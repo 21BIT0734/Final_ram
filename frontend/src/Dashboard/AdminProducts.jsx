@@ -16,8 +16,10 @@ const AdminProducts = () => {
       payload: gadget,
     });
   };
-  useEffect(() => {
-    fetch('https://final-ram-69.vercel.app/view-product')
+    useEffect(() => {
+    fetch('https://final-ram-69.vercel.app/view-product', {
+        credentials: 'include',
+    })
         .then((res) => res.json())
         .then((data) => setGadgets(data));
 }, []);
