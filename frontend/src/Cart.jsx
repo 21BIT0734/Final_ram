@@ -28,7 +28,7 @@ const Cart = () => {
     console.log('Updating database with new quantities:', orderData);
 
     // For demonstration purposes, let's assume you have a backend endpoint for placing orders
-    fetch('http://localhost:4000/place-order', {
+    fetch('https://final-ram-69.vercel.app/place-order', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
