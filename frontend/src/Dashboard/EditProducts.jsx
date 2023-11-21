@@ -63,7 +63,7 @@ const EditProducts = () => {
       Category,
       quantity,
     };
-    fetch(`http://localhost:4000/update-product/${id}`,{
+    fetch(`https://final-ram-69.vercel.app/update-product/${id}`,{
       method:"PATCH",
       headers:{
         "Content-type": "application/json",
