@@ -22,7 +22,7 @@ import { login } from "../Don";
 import DashboardLayout from "../Dashboard/DashboardLayout";
 import PrivateRoute from "../Authentication/PrivateRoute"
 import UserPrivateRoute from "../Authentication/UserPrivateRoute"
-import Cart from "../cart";
+import Cart from "../Cart";
 import AdminProducts from "../Dashboard/AdminProducts";
 import AdminSingleProduct from "../Dashboard/AdminSingleProduct";
 const router = createBrowserRouter([
