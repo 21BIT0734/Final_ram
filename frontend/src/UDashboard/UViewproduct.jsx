@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const UViewproduct = () => {
     const [gadgets,SetGadgets] =useState([]);
     useEffect(()=>{
-      fetch("http://localhost:4000/view-product").then(res => res.json()).then(data =>SetGadgets(data));
+      fetch("https://final-ram-69.vercel.app/view-product").then(res => res.json()).then(data =>SetGadgets(data));
     },[])
 
     return (
