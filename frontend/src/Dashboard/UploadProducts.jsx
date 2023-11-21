@@ -66,7 +66,7 @@ const UploadProducts = () => {
   method: "POST",
   headers: {
     "Content-type": "application/json",
-    'Access-Control-Allow-Origin': 'https://final-ram.vercel.app/',
+    'Access-Control-Allow-Origin': 'https://final-ram.vercel.app',
   },
   body: JSON.stringify(gadgets)
 })
