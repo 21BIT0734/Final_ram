@@ -16,9 +16,9 @@ const AdminProducts = () => {
       payload: gadget,
     });
   };
-    useEffect(() => {
+  useEffect(() => {
     fetch('https://final-ram-69.vercel.app/view-product', {
-        credentials: 'include',
+        credentials: 'include', // Include credentials in the request
     })
         .then((res) => res.json())
         .then((data) => setGadgets(data));
@@ -39,7 +39,6 @@ const AdminProducts = () => {
           <p className="font-normal text-gray-900 dark:text-black text-center">  
           {gadget.description}
           </p>
-          
           <p className='text-center text-black'>{gadget.productName}</p>
           <p className='text-center text-black'><span>&#8377;</span>{gadget.price}</p>
           <br/>
@@ -61,4 +60,4 @@ const AdminProducts = () => {
   )
 }
 
-export default AdminProducts;
+export default AdminProducts
