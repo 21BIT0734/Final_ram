@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
 import { Button, Checkbox,Select, Label, TextInput,Textarea  } from 'flowbite-react';
-
+//
 const EditProducts = () => {
   const{id} =useParams();
   const {productName,brand,imageURL,description,price,quantity} = useLoaderData();
