@@ -63,21 +63,26 @@ const EditProducts = () => {
       Category,
       quantity,
     };
-    fetch(`https://final-ram-69.vercel.app/update-product/${id}`,{
-      method:"PATCH",
-      headers:{
-        "Content-type": "application/json",
-      },
-      body:JSON.stringify(updategadgets)
+fetch(`https://final-ram-69.vercel.app/update-product/${id}`, {
+  method: "PATCH",
+  headers: {
+    "Content-type": "application/json",
+  },
+  body: JSON.stringify(updategadgets),
+})
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return res.json();
+  })
+  .then((data) => {
+    alert("Product Updated successfully");
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 
-      
-    }).then(res => res.json())
-    .then(data => {
-      alert("Product Updated successfully")
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
     
 
 
