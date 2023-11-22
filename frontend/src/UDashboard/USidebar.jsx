@@ -26,7 +26,7 @@ const USidebar = () => {
 
       <Sidebar.Items className="text-white">
         <Sidebar.ItemGroup>
-          <Sidebar.Item href="/user/dashboard/dashboards" icon={HiOutlineChartPie} active={location.pathname === '/admin/dashboard'}>
+          <Sidebar.Item href="/user/dashboard" icon={HiOutlineChartPie} active={location.pathname === '/admin/dashboard'}>
             Dashboard
           </Sidebar.Item> 
           
