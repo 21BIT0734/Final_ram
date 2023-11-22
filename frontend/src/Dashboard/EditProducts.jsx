@@ -69,6 +69,7 @@ fetch(`https://final-ram-69.vercel.app/update-product/${id}`, {
     "Content-type": "application/json",
   },
   body: JSON.stringify(updategadgets),
+  credentials: 'include', 
 })
   .then((res) => {
     if (!res.ok) {
