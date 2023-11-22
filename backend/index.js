@@ -150,18 +150,37 @@ async function run() {
 
 
     //UPDATE (UPDATE PRODUCTS)
-    app.patch("/update-product/:id",async(req,res)=>{
-        const id =req.params.id;
-        const updateProductData = req.body;
-        const filter ={_id: new ObjectId(id)};
-        const updateDoc = {
-            $set: {
-                ...updateProductData
-            }}
-        const options ={upsert : true};
-    const result = await store.updateOne(filter,updateDoc,options);
-    res.send(result);
-    })
+
+    app.patch("/update-product/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updateProductData = req.body;
+    if (Object.keys(updateProductData).length === 0) {
+      return res.status(400).json({ error: "No data provided for update." });
+    }
+
+    const filter = { _id: new ObjectId(id) };
+    const updateDoc = {
+      $set: {
+        ...updateProductData,
+      },
+    };
+
+    const options = { upsert: true };
+
+    const result = await store.updateOne(filter, updateDoc, options);
+
+    if (result.matchedCount === 0 && result.modifiedCount === 0) {
+      return res.status(404).json({ error: "No product found with the provided ID." });
+    }
+
+    res.json({ status: "Product updated successfully." });
+  } catch (error) {
+    console.error("Error in update-product route:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
     //DELETE (DELETE PRODUCTS)
     app.delete("/delete-product/:id",async(req,res)=>{
         const id =req.params.id;
