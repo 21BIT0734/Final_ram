@@ -10,11 +10,13 @@ const UDashboard = () => {
       THIS IS USER DASHBOARD
 
       IF YOU WANT TO ENTER INTO ADMIN DAHBOARD CONTACT DEVELOPER TEAM 187
-      FOR 
+
+        FOR PROJECT VERIFICATION
+      ADMIN ACCESS GIVEN TO THIS CREDETIALS
       Gmail:s69
       Password:s69
 
-      Admin Access Given
+    
       </p>
 
       
