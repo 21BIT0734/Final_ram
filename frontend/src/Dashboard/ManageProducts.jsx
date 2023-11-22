@@ -77,13 +77,13 @@ const ManageProducts = () => {
           </Table.Cell>
 
           <Table.Cell>
-            <Link 
-            className="font-medium text-cyan-600 hover:underline dark:text-cyan-500 "
-            to={`/admin/dashboard/edit/${gadget._id}`}
-            >
-             Edit
+          <Link 
+  className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+  to={`/admin/dashboard/edit/${gadget._id}`}
+   >
+  Edit
+          </Link>
 
-            </Link>
             <button onClick={()=>handleDelete(gadget._id)} className='bg-red-600 px-4 py-1 font-semibold text-white rounded-sm hover:bg-sky-600'>
               Delete
 
